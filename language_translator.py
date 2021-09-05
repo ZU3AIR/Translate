@@ -9,6 +9,7 @@ root.title("Language Translator")
 root.geometry("1080x400")
 
 
+
 #function to change country names in labels
 def label_change():
 	c = combo1.get()
@@ -37,14 +38,18 @@ def translate_now():
 		messagebox.showerror("googletrans","please try again")
 
 
+
+
+
+
 #icon
 image_icon = PhotoImage(file="trans_pic.png")
 root.iconphoto(False,image_icon)
 
 #arrow
-arrow_image = PhotoImage(file="arrow_pic.png")
-image_label=Label(root, image=arrow_image,width=150)
-image_label.place(x=460, y=50)
+arrow_image = PhotoImage(file="bl.png")
+image_label=Label(root, image=arrow_image,width=55, height=50)
+image_label.place(x=510, y=150)
 
 language = googletrans.LANGUAGES
 languageV = list(language.values())
@@ -57,7 +62,7 @@ combo1.set("English")
 
 
 #Label Under selection Bar
-label1 = Label(root, text = "English", font="segoe 30 bold", bg = "white", width = 18, bd = 5, 
+label1 = Label(root, text = "English", font="ComicSansMS 30 bold", bg = "skyblue", width = 18, bd = 5, 
 				relief = GROOVE)
 label1.place(x=10, y=50)
 
@@ -80,14 +85,14 @@ text1.configure(yscrollcommand=scrollbar1.set)
 
 
 
-#Right side language slection bar
+#Right side language selection bar
 combo2 = ttk.Combobox(root, values = languageV, font= "Roboto 14", state="r")
 combo2.place(x = 730, y = 20)
-combo2.set("Slect Language")
+combo2.set("Select Language")
 
 
 #Label Under selection Bar
-label2 = Label(root, text = "English", font="segoe 30 bold", bg = "white", width = 18, bd = 5, 
+label2 = Label(root, text = "English", font="segoe 30 bold", bg = "skyblue", width = 18, bd = 5, 
 				relief = GROOVE)
 label2.place(x=620, y=50)
 
@@ -111,7 +116,7 @@ text2.configure(yscrollcommand=scrollbar2.set)
 #translate button
 translate = Button(root,text = "Translate",font = "Roboto 15 bold italic",
 					activebackground = "purple", cursor="hand2", bd=5,
-					bg="blue",fg="white", command=translate_now)
+					bg="orange",fg="black", command=translate_now)
 
 translate.place(x = 480, y =250)
 
@@ -121,7 +126,7 @@ translate.place(x = 480, y =250)
 label_change()
 
 
-root.configure(bg = "white")
+root.configure(bg = "lightblue")
 root.mainloop()
 
 
