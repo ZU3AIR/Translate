@@ -128,6 +128,3 @@ label_change()
 
 root.configure(bg = "lightblue")
 root.mainloop()
-
-
-
